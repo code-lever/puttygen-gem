@@ -1,5 +1,9 @@
 rvm:
  - 2.2.3
 
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y putty-tools
+
 notifications:
  disabled: true
