@@ -1,10 +1,18 @@
-# Puttygen
+# puttygen [![Build Status](https://travis-ci.org/code-lever/puttygen-gem.png)](https://travis-ci.org/code-lever/puttygen-gem) [![Dependency Status](https://gemnasium.com/code-lever/puttygen-gem.png)](https://gemnasium.com/code-lever/puttygen-gem) [![Code Climate](https://codeclimate.com/github/code-lever/puttygen-gem.png)](https://codeclimate.com/github/code-lever/puttygen-gem) [![Gem Version](https://badge.fury.io/rb/puttygen.svg)](http://badge.fury.io/rb/puttygen)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/puttygen`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+An unofficial puttygen Ruby gem.  Generate or convert SSH key files.
 
 ## Installation
+
+This gem requires putty to be installed on your system.  It currently only works with the *nix distributions.
+
+> brew install putty
+
+or
+
+> apt-get install putty-tools
+
+or something else, depending on your platform.
 
 Add this line to your application's Gemfile:
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/puttygen/fork )
+1. Fork it ( https://github.com/code-lever/puttygen-gem/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
