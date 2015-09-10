@@ -4,7 +4,7 @@ An unofficial puttygen Ruby gem.  Generate or convert SSH key files.
 
 ## Installation
 
-This gem requires putty to be installed on your system.  It currently only works with the *nix distributions.
+This gem requires [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/) to be installed on your system.  It currently only works with the *nix distributions.
 
 > brew install putty
 
