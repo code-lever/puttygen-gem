@@ -32,7 +32,7 @@ module Puttygen
   # @param output_format [Symbol] output format of private key to generate, one of +:putty+, +:openssh+ or +:sshcom+
   # @return [String] private key contents
   def self.convert_private_key(private_key_path, output_format: :putty)
-    outfile = Dir::Tmpname.make_tmpname(Dir.tmpdir, nil)
+    outfile = build_temp_filename
     outflag = PRIVATE_OUTPUT_FORMATS.fetch(output_format, 'private')
     out, status = Open3.capture2e("puttygen #{private_key_path} -q -O #{outflag} -o #{outfile}")
     process_exit_status(out, status)
@@ -62,7 +62,7 @@ module Puttygen
   # @param public_format [Symbol] output format of public key to generate, one of +:standard+, +:openssh+ or +:sshcom+
   # @return [Keypair] public and private keys
   def self.generate_keypair(type: :rsa, bits: 2048, comment: nil, passphrase: nil, private_format: :putty, public_format: :standard)
-    outfile = Dir::Tmpname.make_tmpname(Dir.tmpdir, nil)
+    outfile = build_temp_filename
     outflag = PRIVATE_OUTPUT_FORMATS.fetch(private_format, 'private')
     line = "puttygen -q -t #{type} -b #{bits} -C '#{comment}' -O #{outflag} -o #{outfile}"
 
@@ -100,6 +100,11 @@ module Puttygen
     unless(status.success?)
       raise "Command failed (#{output.strip})"
     end
+  end
+
+  def self.build_temp_filename
+    name = Dir::Tmpname.make_tmpname('/', nil)
+    File.join(Dir.tmpdir, name).to_s
   end
 
 end
