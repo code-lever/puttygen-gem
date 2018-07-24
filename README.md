@@ -1,4 +1,4 @@
-# puttygen [![Build Status](https://travis-ci.org/code-lever/puttygen-gem.png)](https://travis-ci.org/code-lever/puttygen-gem) [![Dependency Status](https://gemnasium.com/code-lever/puttygen-gem.png)](https://gemnasium.com/code-lever/puttygen-gem) [![Code Climate](https://codeclimate.com/github/code-lever/puttygen-gem.png)](https://codeclimate.com/github/code-lever/puttygen-gem) [![Gem Version](https://badge.fury.io/rb/puttygen.svg)](http://badge.fury.io/rb/puttygen)
+# puttygen [![Build Status](https://travis-ci.org/code-lever/puttygen-gem.png)](https://travis-ci.org/code-lever/puttygen-gem) [![Code Climate](https://codeclimate.com/github/code-lever/puttygen-gem.png)](https://codeclimate.com/github/code-lever/puttygen-gem) [![Gem Version](https://badge.fury.io/rb/puttygen.svg)](http://badge.fury.io/rb/puttygen)
 
 An unofficial puttygen Ruby gem.  Generate or convert SSH key files.
 
